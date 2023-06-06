@@ -1,9 +1,5 @@
-// console.log("Public folder js file");
-
 const fetchWeather = location =>
-  fetch(
-    `http://localhost:3000/weather?address=${encodeURIComponent(location)}`
-  ).then((res, err) => {
+  fetch(`/weather?address=${encodeURIComponent(location)}`).then((res, err) => {
     if (err) {
       firstMsg.textContent = err;
     } else {
